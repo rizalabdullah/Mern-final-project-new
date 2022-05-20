@@ -1,0 +1,10 @@
+.container-tambah{
+    width: 40%;
+    margin-top: 100px;
+}
+
+@media screen and (max-width:600px){
+    .container-tambah{
+        width: 80%;
+    }
+}
