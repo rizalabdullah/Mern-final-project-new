@@ -4,7 +4,6 @@ import axios from "axios";
 import { Container, Form, FormControl, Nav, Navbar} from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import "./style.css";
-import { useSelector } from 'react-redux';
 
 const Home = () => {
 
@@ -110,7 +109,7 @@ const Home = () => {
               <div key={i}  className="col-6 col-sm-4 col-md-3 " >
                 <div className="card " style={{height:"400px", marginTop:"10px"}} >
                 <Link to={`/detail/${articles._id}`} style={{textDecoration:"none",color:"black",cursor:"pointer"}} > 
-                    <img src= {`http://localhost:5000/images/products/${articles.image_url}`} className="card-img-top" alt="..." /> 
+                    <img src= {`/images/upload/${articles.image_url}`} className="card-img-top" alt="..." /> 
                 </Link>
                   <div className="card-body card-home" >
                     <h5 className="card-title title"><Link to={`/detail/${articles._id}`} style={{textDecoration:"none",color:"black",cursor:"pointer"}} >{articles.name}</Link> </h5>
@@ -132,7 +131,7 @@ const Home = () => {
                       <Link to={`/edit/${articles._id}`} className="btn btn-sm btn-outline-success"><i className="fa fa-lg fa-edit text-primary"></i></Link>
                    </span> 
                    <span style={{cursor:"pointer"}}>
-                      <Link to={`/edit/${articles._id}`} className="btn btn-sm btn-outline-primary"><i className="fa fa-lg fa-plus text-success "></i></Link>
+                      <Link to="/tambah" className="btn btn-sm btn-outline-primary"><i className="fa fa-lg fa-plus text-success "></i></Link>
                    </span>                
                 </div>
                

@@ -4,7 +4,6 @@ const fs = require('fs');
 const config = require('../config');
 const Article = require('./model');
 // const Category = require('../category/model');
-// const Tag = require('../tag/model');
 
 const store = async (req, res, next) => {
   try{
@@ -21,24 +20,13 @@ const store = async (req, res, next) => {
     //      delete payload.category;
     //   }
     // }
-
-    // if(payload.tags && payload.length > 0){
-    //   let tags = 
-    //     await Tag
-    //     .findOne({name: {$in: payload.tags}});
-    //   if(tags.length){ 
-    //      payload = {...payload, tags: tags.map(tag => tag._id)};
-    //   } else {
-    //      delete payload.tags;
-    //   }
-    // }
    
     if(req.file){
        let tmp_path = req.file.path; 
        let originalExt = req.file.originalname.split('.')[req.file.originalname.split('.').length - 1];
       // let filename = req.file.filename + '.' + originalExt;
       let filename1 = req.file.originalname;
-       let target_path = path.resolve(config.rootPath, `public/images/articles/${filename1}`);
+       let target_path = path.resolve(config.rootPath, `public/images/upload/${filename1}`);
 
        const src = fs.createReadStream(tmp_path);
        const dest = fs.createWriteStream(target_path);
@@ -105,23 +93,12 @@ const update = async (req, res, next) => {
     //   }
     // }
 
-    // if(payload.tags && payload.tags.length > 0){
-    //   let tags = 
-    //   await Tag
-    //   .find({name: {$in: payload.tags}});
-    //   if(tags.length){ 
-    //      payload = {...payload, tags: tags.map(tag => tag._id)};
-    //   } else {
-    //      delete payload.tags;
-    //   }
-    // }
-
     if(req.file){
        let tmp_path = req.file.path; 
        let originalExt = req.file.originalname.split('.')[req.file.originalname.split('.').length - 1];
       // let filename = req.file.filename + '.' + originalExt;
       let filename1 = req.file.originalname;
-       let target_path = path.resolve(config.rootPath, `public/images/articles/${filename1}`);
+       let target_path = path.resolve(config.rootPath, `public/images/upload/${filename1}`);
 
        const src = fs.createReadStream(tmp_path);
        const dest = fs.createWriteStream(target_path);
@@ -195,10 +172,7 @@ const index = async (req, res, next) => {
     .find()
      .limit(PAGE_SIZE)
      .skip(PAGE_SIZE * page)
-    // .skip(parseInt(skip))
-    // .limit(parseInt(limit))
     // .populate('category');
-    // .populate('tags');
     return res.json({
       data: article,
        totalPages: Math.ceil(total / PAGE_SIZE)
@@ -219,7 +193,7 @@ const view = (req,res) => {
 const destroy = async (req, res, next) => {
   try {
     let article = await Article.findByIdAndDelete(req.params.id);
-    let currentImage = `${config.rootPath}/public/images/articles/${article.image_url}`;
+    // let currentImage = `${config.rootPath}/public/images/articles/${article.image_url}`;
     // if(fs.existsSync(currentImage)){
     //   fs.unlinkSync(currentImage)
     // }

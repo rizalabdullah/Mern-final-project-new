@@ -11,6 +11,7 @@ const cors = require(`cors`);
 const {decodeToken} = require('./middlewares');
 const authRoute = require('./app/auth/router');
 const articleRoute = require('./app/article/router');
+const categoryRoute = require('./app/category/router');
 
 var app = express();
 
@@ -31,21 +32,22 @@ app.use(decodeToken());
 
 app.use(`/auth`, authRoute);
 app.use(`/api`, articleRoute);
+app.use(`/api`, categoryRoute);
 
 
 //Home
-app.use(`/`, (req, res) => {
-   res.render(`index`, {
-     title: `Server MongoDB`
-   })
-  })
+// app.use(`/`, (req, res) => {
+//    res.render(`index`, {
+//      title: `Server MongoDB`
+//    })
+//   })
 
-// if (process.env.NODE_ENV === 'production') {
-//    app.use(express.static('client/build'));
-//   app.get('*', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-//    });   
-//  }
+if (process.env.NODE_ENV === 'production') {
+   app.use(express.static('client/build'));
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+   });   
+ }
 
 
 // catch 404 and forward to error handler

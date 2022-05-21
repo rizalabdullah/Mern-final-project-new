@@ -65,7 +65,7 @@ const getProductById = async () => {
         </div>
 
       <div className='row' style={{width:"100%"}}>
-        <div className="form-group col">
+        <div className="form-group col mb-2">
             <label >Description</label>
               <textarea name="description" style={{width:"100%", height:"80px",resize:"none"}} value={description} onChange={ (e) => {
               setDescription(e.target.value)}} >   
@@ -74,7 +74,7 @@ const getProductById = async () => {
       </div> 
 
       <div className='row' style={{width:"100%"}}>
-        <div className="form-group ">
+        <div className="form-group col">
           <label >Image</label>
           <input type="file" className="form-control"  placeholder="Gambar" onChange={(event) => {
             const file = event.target.files[0];
