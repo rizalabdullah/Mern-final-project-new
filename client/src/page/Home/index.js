@@ -61,7 +61,7 @@ const Home = () => {
 
     <div>
 
-<Navbar variant="dark" bg="danger" expand="lg" style={{width:"100%"}}>
+<Navbar variant="dark" bg="danger" expand="lg" className="navbar-home" style={{width:"100%"}}>
   <Container fluid >
     <Navbar.Brand href="#">MERN Blog</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
@@ -99,7 +99,6 @@ const Home = () => {
     </Navbar.Collapse>
   </Container>
 </Navbar> 
-
 
       
         <div className="row row-home" >           
