@@ -106,7 +106,7 @@ const Home = () => {
            searchProduct.map && searchProduct.map((articles, i) => {
            return(
               <div key={i}  className="col-6 col-sm-4 col-md-3 " >
-                <div className="card " style={{height:"400px", marginTop:"10px"}} >
+                <div className="card " >
                 <Link to={`/detail/${articles._id}`} style={{textDecoration:"none",color:"black",cursor:"pointer"}} > 
                     <img src= {`/images/upload/${articles.image_url}`} className="card-img-top" alt="..." /> 
                 </Link>

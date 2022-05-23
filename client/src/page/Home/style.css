@@ -32,14 +32,18 @@
   padding-bottom: 10px;
 }
 
+.card{
+  height: 400px;
+  margin-top: 10px;
+}
+
 
 @media screen and (max-width:600px){
-  .col-6, .card-footer{
-    height: 300px;
+   /* .col-6, .card-footer{
+    height: 100px;
     font-family: "Varela Round", sans-serif;
     font-size: 14px;
     color: #444;
-    /* margin-top: 15px; */
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -47,14 +51,14 @@
     -webkit-box-orient: vertical;
     padding: 10px ;
     
-  }
-  .col-6, .card-home{
-    height: 360px;
-  }
-  .col-6, .row-home{
+  }  */
+   /* .col-6, .card-home{
+    height: 100px;
+  } */
+  /* .col-6, .row-home{
     padding-bottom: 10px;
     padding-top: 0px;
-  }
+  }  */
   .select-home{
     width: 100px;
   }
@@ -64,6 +68,11 @@
   .navbar-home{
     overflow: hidden;
   }
+
+  .card{
+    height: 320px;
+  }
+  
   
 }
 

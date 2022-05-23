@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, Button, Card} from 'react-bootstrap';
+import {Form, Button, Card, Container} from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -60,7 +60,8 @@ export default function Login() {
 
     <Gambar>
 
-    <Card className='card-login' >
+     <Container className='card-login'>
+    <Card className="card " >
       <Card.Header>Login</Card.Header>
       <Card.Body>
         <Form onSubmit={handleSubmit(onSubmit)}>
@@ -93,9 +94,10 @@ export default function Login() {
             { status === statusList.process ? 'Memprosess...' : 'Login'}
           </Button>
         </Form>
-        <Link to="/register" className="text-dark" style={{marginLeft:`40%`,fontSize:`18px`}}>Registrasi</Link>
+        <Link to="/register" className="text-dark text-register" >Registrasi</Link>
       </Card.Body>
     </Card>
+    </Container>
   
   </Gambar>
   )

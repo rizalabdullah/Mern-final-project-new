@@ -27,7 +27,8 @@ function App() {
               <Logout />
           </Route>   
           <Route path="/home">
-          { !auth.user ? <Redirect to="/" /> : <Home /> } 
+          <Home />
+          {/* { !auth.user ? <Redirect to="/" /> : <Home /> }  */}
           </Route>
            <Route path="/tambah">
            { !auth.user ? <Redirect to="/" /> : <Tambah /> }
