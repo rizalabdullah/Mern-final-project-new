@@ -34,8 +34,9 @@ const Detail = () => {
             <Navigation />
           <div className="container-fluid container-detail">
             <div className="card card-detail" >
-                    <img src= {`/images/products/${image}`} className="card-img-top img-detail" alt="..." />
-                  <div className="card-body"  >
+                    <img src= {`/images/upload/${image}`} className="card-img-top img-detail" alt="..." />
+                  
+                  <div className="card-body card-body-Detail"  >
                     <h5 className="card-title title text-center">{name}</h5>
                       <label className="text-muted" style={{whiteSpace:"nowrap"}}>Author: {author} 
                         <span className="publish-detail" >

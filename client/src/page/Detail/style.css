@@ -1,11 +1,19 @@
 .container-detail{
     background-color: grey;
     width: 100%;
+
 }
 .card-detail{
     background-color: gainsboro;
     width: 95%;
     margin: auto;
+    
+}
+.card-body-Detail{
+    background-color: gainsboro;
+    width: 100%;
+    
+
 }
 .img-detail{
     height: 300px;
@@ -19,18 +27,24 @@
     font-weight: 600;
     font-family: 'Times New Roman', Times, serif ;
     color:red
+    
 }
 .description-detail{
     font-family: 'Times New Roman', Times, serif ;
     line-height: 25px;
     font-size: 18px;
+    background-color: gainsboro;
+    width: 100%;
+    
+    
+    
 }
 .publish-detail{
-    margin-left: 1030px;
+    margin-left: 1010px;
 }
 
 @media screen and (max-width:600px){
     .publish-detail{
-        margin-left: 225px;
+        margin-left: 190px;
     }
 }

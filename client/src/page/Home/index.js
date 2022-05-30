@@ -122,7 +122,7 @@ const Home = () => {
                       const notif = window.confirm("Apakah anda ingin menghapus?");
                         if(notif === true){
                           deleteProducts(articles._id)
-              
+                        
                         }
                       }  }><button className='btn btn-sm btn-outline-warning'><i className="fa fa-lg fa-trash text-danger"></i></button>
                    </span>
@@ -141,7 +141,7 @@ const Home = () => {
               
                     }
             </div> 
-
+            
      {/* Pagination */}
      <div className='pagination'>
             <button className='page-link' onClick={gotoPrevious}>Previous</button>
@@ -152,7 +152,7 @@ const Home = () => {
               ))}
       <button className='page-link' onClick={gotoNext}>Next</button>
     </div>
-
+     
   </div>
   )
 }
