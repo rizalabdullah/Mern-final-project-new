@@ -165,7 +165,7 @@ const update = async (req, res, next) => {
 const index = async (req, res, next) => {
   try {
 
-    const PAGE_SIZE = 4;
+    const PAGE_SIZE = 10;
     const page = parseInt(req.query.page || "0");
     const total = await Article.countDocuments({});
     let article = await Article
