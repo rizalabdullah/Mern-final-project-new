@@ -121,7 +121,7 @@ const Home = () => {
                     <span style={{cursor:"pointer"}} onClick={ ()=> {
                       const notif = window.confirm("Apakah anda ingin menghapus?");
                         if(notif === true){
-                          deleteProducts(articles._id)
+                          deleteProducts(articles._id);
                         
                         }
                       }  }><button className='btn btn-sm btn-outline-warning'><i className="fa fa-lg fa-trash text-danger"></i></button>
@@ -147,13 +147,13 @@ const Home = () => {
             <button className='page-link' onClick={gotoPrevious}>Previous</button>
               {pages.map((pageIndex) => (
                 <button className='page-link' key={pageIndex} onClick={() => setPageNumber(pageIndex)}>
-                  {pageIndex + 1}
+                  {pageIndex + 1}  
                 </button>
               ))}
       <button className='page-link' onClick={gotoNext}>Next</button>
     </div>
-     
   </div>
+  
   )
 }
 

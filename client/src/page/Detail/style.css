@@ -1,7 +1,9 @@
 .container-detail{
-    background-color: grey;
+    background: grey;
     width: 100%;
-
+    position: fixed;
+    overflow-y: scroll;
+    height: 600px;
 }
 .card-detail{
     background-color: gainsboro;
