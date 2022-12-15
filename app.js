@@ -34,19 +34,19 @@ app.use(`/auth`, authRoute);
 app.use(`/api`, articleRoute);
 app.use(`/api`, categoryRoute);
 
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static('client/build'));
-//  app.get('*', (req, res) => {
-//    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-//   });   
-// }
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+ app.get('*', (req, res) => {
+   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });   
+}
 
 //Home
-app.use(`/`, (req, res) => {
-   res.render(`index`, {
-     title: `Server MongoDB`
-   })
-  })
+// app.use(`/`, (req, res) => {
+//    res.render(`index`, {
+//      title: `Server MongoDB`
+//    })
+//   })
 
 
 

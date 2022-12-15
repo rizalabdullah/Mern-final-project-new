@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "debug": "SET DEBUG=MERN-final-project:* && npm start",
+    "debug": "SET DEBUG=MERN-final-project:* && nodemon start",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client"
   },
   "dependencies": {
